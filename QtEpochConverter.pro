@@ -2,7 +2,7 @@ TARGET = QtEpochConverter
 TEMPLATE = app
 DEPENDPATH += .
 INCLUDEPATH += .
-QT += gui core declarative
+QT += gui core widgets
 
 SOURCES += main.cpp\
         epochconverter.cpp
