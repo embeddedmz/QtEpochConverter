@@ -2,7 +2,6 @@
 #include <string.h>
 #include <time.h>
 
-
 /*
  * We do not implement alternate representations. However, we always
  * check whether a given modifier is allowed for a certain conversion.
@@ -381,7 +380,3 @@ int strncasecmp(char *s1, char *s2, size_t n)
 
     return tolower(*(unsigned char *) s1) - tolower(*(unsigned char *) s2);
 }
-
-
-//??
-#include <conio.h>

@@ -22,7 +22,7 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>391</width>
+     <width>721</width>
      <height>201</height>
     </rect>
    </property>
@@ -50,7 +50,7 @@
      <rect>
       <x>180</x>
       <y>100</y>
-      <width>141</width>
+      <width>191</width>
       <height>23</height>
      </rect>
     </property>
@@ -76,7 +76,7 @@
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>181</width>
+      <width>191</width>
       <height>16</height>
      </rect>
     </property>
@@ -99,7 +99,7 @@
      <rect>
       <x>30</x>
       <y>70</y>
-      <width>321</width>
+      <width>391</width>
       <height>16</height>
      </rect>
     </property>
@@ -121,7 +121,7 @@
      <rect>
       <x>40</x>
       <y>170</y>
-      <width>81</width>
+      <width>101</width>
       <height>16</height>
      </rect>
     </property>
@@ -132,7 +132,7 @@
    <widget class="QLCDNumber" name="uiLCDCurrentEpoch">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>230</x>
       <y>30</y>
       <width>181</width>
       <height>23</height>
@@ -148,10 +148,10 @@
    <widget class="QLabel" name="uiLBEpochToGMTDateString">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>140</y>
-      <width>251</width>
-      <height>16</height>
+      <width>561</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -164,10 +164,10 @@
    <widget class="QLabel" name="uiLBEpochToLocalDateString">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>170</y>
-      <width>251</width>
-      <height>16</height>
+      <width>561</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -193,9 +193,9 @@
    <widget class="QSpinBox" name="uiSpinBoxYear">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>50</y>
-      <width>51</width>
+      <width>61</width>
       <height>22</height>
      </rect>
     </property>
@@ -212,7 +212,7 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>30</x>
       <y>30</y>
       <width>46</width>
       <height>13</height>
@@ -225,7 +225,7 @@
    <widget class="QSpinBox" name="uiSpinBoxMonth">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>90</x>
       <y>50</y>
       <width>51</width>
       <height>22</height>
@@ -244,7 +244,7 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>90</x>
       <y>30</y>
       <width>46</width>
       <height>13</height>
@@ -257,7 +257,7 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>160</x>
       <y>30</y>
       <width>46</width>
       <height>13</height>
@@ -270,7 +270,7 @@
    <widget class="QSpinBox" name="uiSpinBoxDay">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>160</x>
       <y>50</y>
       <width>51</width>
       <height>22</height>
@@ -289,7 +289,7 @@
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>230</x>
       <y>30</y>
       <width>46</width>
       <height>13</height>
@@ -302,7 +302,7 @@
    <widget class="QSpinBox" name="uiSpinBoxHour">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>230</x>
       <y>50</y>
       <width>51</width>
       <height>22</height>
@@ -321,7 +321,7 @@
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>300</x>
       <y>30</y>
       <width>46</width>
       <height>13</height>
@@ -334,7 +334,7 @@
    <widget class="QSpinBox" name="uiSpinBoxMinute">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>300</x>
       <y>50</y>
       <width>51</width>
       <height>22</height>
@@ -353,7 +353,7 @@
    <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>370</x>
       <y>30</y>
       <width>46</width>
       <height>13</height>
@@ -366,7 +366,7 @@
    <widget class="QSpinBox" name="uiSpinBoxSecond">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>370</x>
       <y>50</y>
       <width>51</width>
       <height>22</height>
@@ -385,9 +385,9 @@
    <widget class="QComboBox" name="uiComboBoxTZ">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>440</x>
       <y>50</y>
-      <width>69</width>
+      <width>91</width>
       <height>22</height>
      </rect>
     </property>
@@ -407,7 +407,7 @@
      <rect>
       <x>540</x>
       <y>50</y>
-      <width>141</width>
+      <width>171</width>
       <height>23</height>
      </rect>
     </property>
@@ -420,7 +420,7 @@
      <rect>
       <x>120</x>
       <y>120</y>
-      <width>131</width>
+      <width>201</width>
       <height>16</height>
      </rect>
     </property>
@@ -433,7 +433,7 @@
      <rect>
       <x>120</x>
       <y>90</y>
-      <width>91</width>
+      <width>201</width>
       <height>16</height>
      </rect>
     </property>
@@ -446,7 +446,7 @@
      <rect>
       <x>120</x>
       <y>150</y>
-      <width>121</width>
+      <width>201</width>
       <height>16</height>
      </rect>
     </property>
@@ -459,7 +459,7 @@
      <rect>
       <x>120</x>
       <y>180</y>
-      <width>151</width>
+      <width>201</width>
       <height>16</height>
      </rect>
     </property>
@@ -470,9 +470,9 @@
    <widget class="QLabel" name="uiLBDateToEpoch">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>340</x>
       <y>90</y>
-      <width>261</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
@@ -486,9 +486,9 @@
    <widget class="QLabel" name="uiLBDateToEpochMs">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>340</x>
       <y>120</y>
-      <width>261</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
@@ -502,9 +502,9 @@
    <widget class="QLabel" name="uiLBDateToGMTString">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>340</x>
       <y>150</y>
-      <width>261</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
@@ -518,9 +518,9 @@
    <widget class="QLabel" name="uiLBDateString">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>340</x>
       <y>180</y>
-      <width>261</width>
+      <width>371</width>
       <height>16</height>
      </rect>
     </property>
