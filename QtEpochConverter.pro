@@ -16,6 +16,7 @@ RESOURCES += \
     Icons.qrc
 
 win32:RC_ICONS += calendar_clock.ico
+win32:DEFINES += "_WINDOWS"
 
 CONFIG(release, debug|release): CONFIG += release
 CONFIG(debug, debug|release): CONFIG += debug
