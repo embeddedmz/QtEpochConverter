@@ -1,6 +1,6 @@
 #include "epochconverter.h"
 #include "ui_epochconverter.h"
-#include "strptime.h"
+//#include "strptime.h"
 
 EpochConverter::EpochConverter(QWidget *parent) :
     QWidget(parent),
@@ -117,9 +117,19 @@ void EpochConverter::DateToTimestamp()
     tmDate.tm_hour = iHour;
     tmDate.tm_min = iMinute;
     tmDate.tm_sec = iSecond;
+    #ifdef _WINDOWS
+    /* In Windows, it is preferable to put the correct GMT offset, as according to the system settings,
+     * if we keep it at zero, we might have an incorrect epoch with mktime(). */
     tmDate.tm_isdst = (qstrTZ == "GMT") ? 0 : GetGMTOffset();
+    #else
+    tmDate.tm_isdst = 0;
+    #endif
 
+    #ifdef _WINDOWS
     tEpoch = (qstrTZ == "GMT") ? _mkgmtime(&tmDate) : mktime(&tmDate);
+    #else
+    tEpoch = (qstrTZ == "GMT") ? timegm(&tmDate) : mktime(&tmDate);
+    #endif
 
     if (tEpoch == -1)
     {
