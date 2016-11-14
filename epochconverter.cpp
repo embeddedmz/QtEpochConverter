@@ -65,13 +65,20 @@ void EpochConverter::TimestampToDate()
         //qDebug() << "[DEBUG] time_t max = " << std::numeric_limits<time_t>::max();
         //strtoul(ui->uiLineEditUserEpoch->text().toStdString().c_str(), nullptr, 10);
         //time_t llEpoch = static_cast<time_t>(ui->uiLineEditUserEpoch->text().toULongLong(&bOk));
-        time_t llEpoch = ui->uiLineEditUserEpoch->text().toLongLong(&bOk);
+        time_t llEpoch;
+        if (sizeof(time_t) > 4)
+            llEpoch = ui->uiLineEditUserEpoch->text().toLongLong(&bOk);
+        else
+            llEpoch = ui->uiLineEditUserEpoch->text().toLong(&bOk);
 
         if (!bOk)
         {
-            QMessageBox::critical(this, tr("Error"), tr("The number you entered exceeds 64-bit max. unsigned number.\n"
-                                                        "The universe will probably disappear before that date !"
+            QMessageBox::critical(this, tr("Error"), tr("The number you entered exceeds the maximum epoch you can represent in your system.\n"
+                                                        "The universe will probably disappear before that date (if your system is a 64-bit) !"
+                                                        " or your are not ready for 2038 (you have a 32-bit OS)."
                                                         ));
+            ui->uiLBEpochToGMTDateString->setText("");
+            ui->uiLBEpochToLocalDateString->setText("");
             return;
         }
 
@@ -133,12 +140,16 @@ void EpochConverter::DateToTimestamp()
 
     if (tEpoch == -1)
     {
-        QMessageBox::critical(this, tr("Error"), tr("Unable to convert the human date to epoch date !"));
+        QMessageBox::critical(this, tr("Error"), tr("Unable to convert the human date to epoch date ! Maybe your system is not 2038 ready !"));
+        ui->uiLBDateToEpoch->setText("");
+        ui->uiLBDateToEpochMs->setText("");
+        ui->uiLBDateToGMTString->setText("");
+        ui->uiLBDateString->setText("");
         return;
     }
 
     ui->uiLBDateToEpoch->setText(QString::number(tEpoch));
-    ui->uiLBDateToEpochMs->setText(QString::number(tEpoch*1000));
+    ui->uiLBDateToEpochMs->setText(QString::number(static_cast<qlonglong>(tEpoch)*1000));
 
     // ...
     struct tm tmGMT;
