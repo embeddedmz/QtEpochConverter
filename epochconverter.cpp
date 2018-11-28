@@ -66,10 +66,18 @@ void EpochConverter::TimestampToDate()
         //strtoul(ui->uiLineEditUserEpoch->text().toStdString().c_str(), nullptr, 10);
         //time_t llEpoch = static_cast<time_t>(ui->uiLineEditUserEpoch->text().toULongLong(&bOk));
         time_t llEpoch;
-        if (sizeof(time_t) > 4)
-            llEpoch = ui->uiLineEditUserEpoch->text().toLongLong(&bOk);
+        if (ui->uiLineEditUserEpoch->text().contains('.') ||
+            ui->uiLineEditUserEpoch->text().contains('E'))
+        {
+            llEpoch = ui->uiLineEditUserEpoch->text().toDouble(&bOk);
+        }
         else
-            llEpoch = ui->uiLineEditUserEpoch->text().toLong(&bOk);
+        {
+            if (sizeof(time_t) > 4)
+                llEpoch = ui->uiLineEditUserEpoch->text().toLongLong(&bOk);
+            else
+                llEpoch = ui->uiLineEditUserEpoch->text().toLong(&bOk);
+        }
 
         if (!bOk)
         {
